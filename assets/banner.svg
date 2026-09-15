@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <style>
+      .title { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 48px; fill: #ffffff; }
+      .subtitle { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 22px; fill: #94a3b8; }
+      .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 14px; fill: #38bdf8; }
+      .pulse-circle { animation: pulse 3s infinite ease-in-out; }
+      @keyframes pulse {
+        0% { transform: scale(1); opacity: 0.3; }
+        50% { transform: scale(1.08); opacity: 0.7; }
+        100% { transform: scale(1); opacity: 0.3; }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+        100% { transform: translateY(0px); }
+      }
+      .floating { animation: float 4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)" rx="16"/>
+  <rect width="1200" height="400" fill="none" stroke="#334155" stroke-width="2" rx="16"/>
+
+  <!-- Dynamic Grid Lines -->
+  <g stroke="#334155" stroke-width="1" opacity="0.3">
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="500" y1="0" x2="500" y2="400"/>
+    <line x1="700" y1="0" x2="700" y2="400"/>
+    <line x1="900" y1="0" x2="900" y2="400"/>
+    <line x1="1100" y1="0" x2="1100" y2="400"/>
+
+    <line x1="0" y1="80" x2="1200" y2="80"/>
+    <line x1="0" y1="160" x2="1200" y2="160"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+  </g>
+
+  <!-- Waveform / Surveillance Graph Signal -->
+  <path d="M 50 280 Q 200 280 300 240 T 550 200 T 800 250 T 1050 140 L 1150 160" fill="none" stroke="url(#accent)" stroke-width="4" filter="url(#shadow)"/>
+  <path d="M 50 280 Q 200 280 300 240 T 550 200 T 800 250 T 1050 140 L 1150 160 L 1150 360 L 50 360 Z" fill="url(#glow)" opacity="0.15"/>
+
+  <!-- Animated Glowing Nodes -->
+  <g filter="url(#shadow)">
+    <circle cx="300" cy="240" r="8" fill="#06b6d4">
+      <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="200" r="9" fill="#3b82f6">
+      <animate attributeName="r" values="7;11;7" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="250" r="7" fill="#6366f1">
+      <animate attributeName="r" values="5;9;5" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1050" cy="140" r="10" fill="#a855f7">
+      <animate attributeName="r" values="8;13;8" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Top Pill Badge -->
+  <g transform="translate(80, 50)" class="floating">
+    <rect width="280" height="34" rx="17" fill="#1e293b" stroke="#0284c7" stroke-width="1.5"/>
+    <circle cx="20" cy="17" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="36" y="22" class="badge-text">GLOBAL HEALTH INTELLIGENCE</text>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <g transform="translate(80, 145)">
+    <text x="0" y="0" class="title">Awesome Public Health Surveillance</text>
+    <text x="0" y="42" class="subtitle">Curated SaaS Platforms, Open-Source HMIS, Outbreak Response &amp; Epi Tools</text>
+  </g>
+
+  <!-- Feature Tags -->
+  <g transform="translate(80, 275)">
+    <!-- Tag 1 -->
+    <rect x="0" y="0" width="160" height="36" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="16" y="23" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" font-weight="600">🦠 Outbreak Tracking</text>
+
+    <!-- Tag 2 -->
+    <rect x="175" y="0" width="150" height="36" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="191" y="23" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" font-weight="600">🏥 DHIS2 &amp; SORMAS</text>
+
+    <!-- Tag 3 -->
+    <rect x="340" y="0" width="160" height="36" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="356" y="23" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" font-weight="600">📊 Epi &amp; GIS Analytics</text>
+
+    <!-- Tag 4 -->
+    <rect x="515" y="0" width="170" height="36" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="531" y="23" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" font-weight="600">🌐 Global SaaS &amp; Open</text>
+  </g>
+</svg>
