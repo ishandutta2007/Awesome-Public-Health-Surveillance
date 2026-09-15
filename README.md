@@ -68,7 +68,7 @@ This repository tracks premier **SaaS/hosted platforms** and **open-source proje
 
 *Sorted in descending order by GitHub Star count.*
 
-| Repository | Stars ⭐ | Description | Key Capabilities |
+| Repository | Github_Stars ⭐ | Description | Key Capabilities |
 | :--- | :--- | :--- | :--- |
 | **[openmrs/openmrs-core](https://github.com/openmrs/openmrs-core/stargazers)** 🏥 | [![GitHub_Stars](https://img.shields.io/github/stars/openmrs/openmrs-core?style=social&color=white)](https://github.com/openmrs/openmrs-core/stargazers) | Open-source electronic medical record system platform core used globally in public health clinics. | Patient EMR, clinical workflows, REST API, surveillance integration |
 | **[getodk/collect](https://github.com/getodk/collect/stargazers)** 📱 | [![GitHub_Stars](https://img.shields.io/github/stars/getodk/collect?style=social&color=white)](https://github.com/getodk/collect/stargazers) | Open Data Kit (ODK) Collect — Android app for mobile survey data collection in offline field environments. | Offline form entry, GPS mapping, photo/audio capture, ODK Aggregate/Central sync |
